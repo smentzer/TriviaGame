@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Triva Game</title>
+    <!-- Reset stylesheet -->
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <!-- My Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <!--fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+    <script src='http://use.edgefonts.net/creepster.js'></script>
+    <!--Favicon-->
+    <link rel="icon" type="image/ico" href="assets/images/fav.ico">
+</head>
+
+<body>
+
+
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Trivia</h1>
+            <p class="lead">Think you know horror movies? Prove it! </p>
+            <!-- html for js, build the quiz -->
+            <div>
+                <form name="quiz" method="post" name="buttons" id="quiz" onsubmit="return false">
+
+                    <div class="question">If you are a teenager living on Elm Street what should you never do?</div>
+                    <input id="answer" type="radio" name="group1" value="wrong"> play with dolls <br>
+                    <input id="answer" type="radio" name="group1" value="wrong"> got to prom <br>
+                    <input id="answer" type="radio" name="group1" value="correct"> Go to sleep <br>
+
+                    <div class="question">If you are looking for a job on Crystal Lake what offer should you not
+                        accept?</div>
+                    <input id="answer" type="radio" name="group2" value="wrong"> Mailman <br>
+                    <input id="answer" type="radio" name="group2" value="correct"> Camp counselor <br>
+                    <input id="answer" type="radio" name="group2" value="wrong"> TA <br>
+
+                    <div class="question">The calls are coming from...</div>
+                    <input id="answer" type="radio" name="group3" value="correct"> inside the house<br>
+                    <input id="answer" type="radio" name="group3" value="wrong"> texas <br>
+                    <input id="answer" type="radio" name="group3" value="wrong"> the neighbors <br>
+
+                    <div class="question">All work and no play makes...?</div>
+                    <input id="answer" type="radio" name="group4" value="wrong"> right <br>
+                    <input id="answer" type="radio" name="group4" value="wrong"> here's johnny! <br>
+                    <input id="answer" type="radio" name="group4" value="correct"> jack a dull boy <br>
+
+                    <div class="question">Who is the killer in Halloween?.</div>
+                    <input id="answer" type="radio" name="group5" value="correct"> Micheal Myers <br>
+                    <input id="answer" type="radio" name="group5" value="wrong"> Jason Vorhees <br>
+                    <input id="answer" type="radio" name="group5" value="wrong"> Norman Bates <br>
+
+                </form>
+                <br>
+            </div>
+            <!-- submit the quiz -->
+            <button type="button" class="btn btn-danger" id="submit">Go on, submit.</button>
+            <!-- display results -->
+            <div id="results">Score</div>
+
+        </div>
+    </div>
+
+
+
+    <!--javaScript-->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
+</body>
+
+</html>
