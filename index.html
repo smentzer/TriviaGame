@@ -28,38 +28,7 @@
             <h1 class="display-4">Trivia</h1>
             <p class="lead">Think you know horror movies? Prove it! </p>
             <!-- html for js, build the quiz -->
-            <div>
-                <form name="quiz" method="post" name="buttons" id="quiz" onsubmit="return false">
-
-                    <div class="question">If you are a teenager living on Elm Street what should you never do?</div>
-                    <input id="answer" type="radio" name="group1" value="wrong"> play with dolls <br>
-                    <input id="answer" type="radio" name="group1" value="wrong"> got to prom <br>
-                    <input id="answer" type="radio" name="group1" value="correct"> Go to sleep <br>
-
-                    <div class="question">If you are looking for a job on Crystal Lake what offer should you not
-                        accept?</div>
-                    <input id="answer" type="radio" name="group2" value="wrong"> Mailman <br>
-                    <input id="answer" type="radio" name="group2" value="correct"> Camp counselor <br>
-                    <input id="answer" type="radio" name="group2" value="wrong"> TA <br>
-
-                    <div class="question">The calls are coming from...</div>
-                    <input id="answer" type="radio" name="group3" value="correct"> inside the house<br>
-                    <input id="answer" type="radio" name="group3" value="wrong"> texas <br>
-                    <input id="answer" type="radio" name="group3" value="wrong"> the neighbors <br>
-
-                    <div class="question">All work and no play makes...?</div>
-                    <input id="answer" type="radio" name="group4" value="wrong"> right <br>
-                    <input id="answer" type="radio" name="group4" value="wrong"> here's johnny! <br>
-                    <input id="answer" type="radio" name="group4" value="correct"> jack a dull boy <br>
-
-                    <div class="question">Who is the killer in Halloween?.</div>
-                    <input id="answer" type="radio" name="group5" value="correct"> Micheal Myers <br>
-                    <input id="answer" type="radio" name="group5" value="wrong"> Jason Vorhees <br>
-                    <input id="answer" type="radio" name="group5" value="wrong"> Norman Bates <br>
-
-                </form>
-                <br>
-            </div>
+            <div id="quiz"></div>
             <!-- submit the quiz -->
             <button type="button" class="btn btn-danger" id="submit">Go on, submit.</button>
             <!-- display results -->
