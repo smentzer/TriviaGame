@@ -1,5 +1,5 @@
 * {
-    text-align: center;
+    
   }
 body {
     background: url(../images/background2.jpg) no-repeat center fixed;
@@ -8,17 +8,31 @@ body {
 
 .jumbotron {
     margin: 10%;
-    opacity: 0.6;
+    opacity: 0.75;
     filter: alpha(opacity=60);
+
 
 }
 
 .display-4 {
     font-family: 'creepster';
     text-shadow: 3px 3px #af111c;
-    opacity: 1;
+    text-align: center;
+
 }
 
 p {
     font-family: 'Permanent Marker', cursive;
+    text-align: center;
+   
+}
+#timer{
+    font-family: 'creepster';
+    text-shadow: 3px 3px #af111c;
+    text-align: center;
+}
+#quiz, #results {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 20px;
+    text-align: left;
 }
