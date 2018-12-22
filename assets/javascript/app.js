@@ -87,9 +87,9 @@ timer = setInterval(function() {
     function startGame() {
         for (var i = 0; i < questions.length; i++) {
             $("#quiz").append(questions[i].question + "<br>");
-            $("#quiz").append("<input type='radio' name'" +i+ "'value='a'>" + questions[i].choices.a + "<br>");
-            $("#quiz").append("<input type='radio' name'" +i+ "'value='b'>" + questions[i].choices.b + "<br>");
-            $("#quiz").append("<input type='radio' name'" +i+ "'value='c'>" + questions[i].choices.c + "<br>");
+            $("#quiz").append("<input type='radio' name='" +i+ "'value='a'>" + questions[i].choices.a + "<br>");
+            $("#quiz").append("<input type='radio' name='" +i+ "'value='b'>" + questions[i].choices.b + "<br>");
+            $("#quiz").append("<input type='radio' name='" +i+ "'value='c'>" + questions[i].choices.c + "<br>");
         }
     }
 
