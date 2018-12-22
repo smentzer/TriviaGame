@@ -1,4 +1,11 @@
 // console.log("is this thing on?") (it was in fact on)
+// function for hiding start button div
+$(function () {
+    $("#startButton").show();
+    $(".jumbotron").hide();
+    $(startGame).show();
+});
+
 var audio = new Audio("friday13th.mp3");
 var score = 0;
 
@@ -70,6 +77,13 @@ timer = setInterval(function() {
         },
 
     ];
+    
+    $("#startButton").click(function(){
+        $("#startButton").hide();
+        $(".jumbotron").show();
+    });
+
+
     function startGame() {
         for (var i = 0; i < questions.length; i++) {
             $("#quiz").append(questions[i].question + "<br>");
@@ -80,6 +94,7 @@ timer = setInterval(function() {
     }
 
     startGame();
+   
 //collect user input
 var userChoice;
 var correctAnswer;
