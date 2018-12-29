@@ -107,16 +107,14 @@ function startGame() {
 
 
     function submit() {
-        if (userChoice !== correctAnswer) {
-            questionsWtong++;
-            $("#").text(questionsWrong);
-        }
-        else if (userChoice === correctAnswer) {
-            questionsRight++;
-            $("#").text(questionsRight);
+        for (var i = 0; i < correctAnswer.length; i++) {
+            if (userChoice[i] === correctAnswer[i]) {
+                questionsRight++;
+            } else {
+                questionsWrong++;
+            }
         }
     };
-
 
 
 
