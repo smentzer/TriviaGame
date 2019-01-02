@@ -133,6 +133,7 @@ submit();
 questionsRight = 0;
 questionsWrong = 0;
 $("#results").text("score; " + questionsRight + " out of " + questions.length);
+$("#reset").hide();
 };
 
 
