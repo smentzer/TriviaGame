@@ -17,6 +17,7 @@ var score = 0;
 var timer;
 var time = 60;
 
+function timerFunction () {
 timer = setInterval(function () {
     time--;
     $("#timer").html(time);
@@ -25,10 +26,11 @@ timer = setInterval(function () {
         clearInterval(timer);
         audio.play();
         //call submit function
+        submit();
     };
 
 }, 1000);
-
+}
 
 
 
@@ -91,33 +93,47 @@ function startGame() {
         $("#quiz").append("<input type='radio' name='" + i + "' value='" + prop + "'>  " + obj[prop] + "<br>");
       }
     }
-    // $("#reset").hide();
+    $("#reset").hide();
   };
 
 
-    startGame();
+    
 
 
-    //collect user input
-    var userChoice;
-    var correctAnswer = [ a, b, c, b, c];
-    var questionsRight;
-    var questionsWrong;
+    //answer variables
+    var correctAnswer = [ "a" , "b" , "c" , "b" , "c" ];
+    var questionsRight = 0;
+    var questionsWrong = 0;
     var incompleteAnswers;
 
 
     function submit() {
-        for (var i = 0; i < correctAnswer.length; i++) {
-            if (userChoice[i] === correctAnswer[i]) {
-                questionsRight++;
-            } else {
-                questionsWrong++;
-            }
-        }
+      for (i= 0; i < questions.length; i++) {
+          if ($("input[name=" + i + "]:checked").val() === correctAnswer[i]) {
+              questionsRight++;
+          } else {
+              questionsWrong++;
+          }
+      }  
+      $("#results").text("score; " + questionsRight + " out of " + questions.length);
+      $("#reset").show();
+
+      clearInterval(timer);
     };
 
 
 
+
+function reset() {
+$("#quiz").html("");
+time = 60;
+timerFunction();
+startGame();
+submit();
+questionsRight = 0;
+questionsWrong = 0;
+$("#results").text("score; " + questionsRight + " out of " + questions.length);
+};
 
 
 
