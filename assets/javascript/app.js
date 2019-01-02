@@ -94,6 +94,7 @@ function startGame() {
       }
     }
     $("#reset").hide();
+    timerFunction();
   };
 
 
@@ -128,6 +129,7 @@ function reset() {
 $("#quiz").html("");
 time = 60;
 timerFunction();
+$("#timer").html(time);
 startGame();
 submit();
 questionsRight = 0;
