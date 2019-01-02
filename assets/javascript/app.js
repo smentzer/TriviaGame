@@ -130,6 +130,7 @@ $("#quiz").html("");
 time = 60;
 timerFunction();
 $("#timer").html(time);
+clearInterval(timer);
 startGame();
 submit();
 questionsRight = 0;
